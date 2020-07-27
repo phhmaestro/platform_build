@@ -400,7 +400,7 @@ endif
 
 ## asan ##
 
-# Install some additional tools on ASAN builds IFF we are also installing debug tools
+# Install some additional tools on ASAN builds IF we are also installing debug tools
 ifneq ($(filter address,$(SANITIZE_TARGET)),)
 ifneq (,$(filter debug,$(tags_to_install)))
   tags_to_install += asan
